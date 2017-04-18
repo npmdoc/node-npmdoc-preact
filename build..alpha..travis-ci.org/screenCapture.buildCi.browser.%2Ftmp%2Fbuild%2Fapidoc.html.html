@@ -1,0 +1,433 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/developit/preact">preact (v8.1.0)</a>
+</h1>
+<h4>Fast 3kb React alternative with the same ES6 API. Components &amp; Virtual DOM.</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.preact">module preact</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.preact.Component">
+            function <span class="apidocSignatureSpan">preact.</span>Component
+            <span class="apidocSignatureSpan">(props, context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.preact.cloneElement">
+            function <span class="apidocSignatureSpan">preact.</span>cloneElement
+            <span class="apidocSignatureSpan">(vnode, props)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.preact.createElement">
+            function <span class="apidocSignatureSpan">preact.</span>createElement
+            <span class="apidocSignatureSpan">(nodeName, attributes)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.preact.h">
+            function <span class="apidocSignatureSpan">preact.</span>h
+            <span class="apidocSignatureSpan">(nodeName, attributes)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.preact.render">
+            function <span class="apidocSignatureSpan">preact.</span>render
+            <span class="apidocSignatureSpan">(vnode, parent, merge)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.preact.rerender">
+            function <span class="apidocSignatureSpan">preact.</span>rerender
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">preact.</span>Component.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">preact.</span>options</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.preact.Component">module preact.Component</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.preact.Component.Component">
+            function <span class="apidocSignatureSpan">preact.</span>Component
+            <span class="apidocSignatureSpan">(props, context)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.preact.Component.prototype">module preact.Component.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.preact.Component.prototype.forceUpdate">
+            function <span class="apidocSignatureSpan">preact.Component.prototype.</span>forceUpdate
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.preact.Component.prototype.render">
+            function <span class="apidocSignatureSpan">preact.Component.prototype.</span>render
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.preact.Component.prototype.setState">
+            function <span class="apidocSignatureSpan">preact.Component.prototype.</span>setState
+            <span class="apidocSignatureSpan">(state, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.preact" id="apidoc.module.preact">module preact</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.preact.Component" id="apidoc.element.preact.Component">
+        function <span class="apidocSignatureSpan">preact.</span>Component
+        <span class="apidocSignatureSpan">(props, context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Component(props, context) {
+    this.__d = !0;
+    this.context = context;
+    this.props = props;
+    this.state = this.state || {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.preact.cloneElement" id="apidoc.element.preact.cloneElement">
+        function <span class="apidocSignatureSpan">preact.</span>cloneElement
+        <span class="apidocSignatureSpan">(vnode, props)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function cloneElement(vnode, props) {
+    return h(vnode.nodeName, extend(extend({}, vnode.attributes), props), arguments.length &gt; 2 ? [].slice.call(arguments, 2) : vnode
+.children);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.preact.createElement" id="apidoc.element.preact.createElement">
+        function <span class="apidocSignatureSpan">preact.</span>createElement
+        <span class="apidocSignatureSpan">(nodeName, attributes)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function h(nodeName, attributes) {
+    var lastSimple, child, simple, i, children = EMPTY_CHILDREN;
+    for (i = arguments.length; i-- &gt; 2; ) stack.push(arguments[i]);
+    if (attributes &amp;&amp; null != attributes.children) {
+        if (!stack.length) stack.push(attributes.children);
+        delete attributes.children;
+    }
+    while (stack.length) if ((child = stack.pop()) &amp;&amp; void 0 !== child.pop) for (i = child.length; i--; ) stack.push(child[i]);
+else {
+        if (child === !0 || child === !1) child = null;
+        if (simple = 'function' != typeof nodeName) if (null == child) child = ''; else if ('number' == typeof child) child = String
+(child); else if ('string' != typeof child) simple = !1;
+        if (simple &amp;&amp; lastSimple) children[children.length - 1] += child; else if (children === EMPTY_CHILDREN) children = [ child
+ ]; else children.push(child);
+        lastSimple = simple;
+    }
+    var p = new VNode();
+    p.nodeName = nodeName;
+    p.children = children;
+    p.attributes = null == attributes ? void 0 : attributes;
+    p.key = null == attributes ? void 0 : attributes.key;
+    if (void 0 !== options.vnode) options.vnode(p);
+    return p;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.preact.h" id="apidoc.element.preact.h">
+        function <span class="apidocSignatureSpan">preact.</span>h
+        <span class="apidocSignatureSpan">(nodeName, attributes)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function h(nodeName, attributes) {
+    var lastSimple, child, simple, i, children = EMPTY_CHILDREN;
+    for (i = arguments.length; i-- &gt; 2; ) stack.push(arguments[i]);
+    if (attributes &amp;&amp; null != attributes.children) {
+        if (!stack.length) stack.push(attributes.children);
+        delete attributes.children;
+    }
+    while (stack.length) if ((child = stack.pop()) &amp;&amp; void 0 !== child.pop) for (i = child.length; i--; ) stack.push(child[i]);
+else {
+        if (child === !0 || child === !1) child = null;
+        if (simple = 'function' != typeof nodeName) if (null == child) child = ''; else if ('number' == typeof child) child = String
+(child); else if ('string' != typeof child) simple = !1;
+        if (simple &amp;&amp; lastSimple) children[children.length - 1] += child; else if (children === EMPTY_CHILDREN) children = [ child
+ ]; else children.push(child);
+        lastSimple = simple;
+    }
+    var p = new VNode();
+    p.nodeName = nodeName;
+    p.children = children;
+    p.attributes = null == attributes ? void 0 : attributes;
+    p.key = null == attributes ? void 0 : attributes.key;
+    if (void 0 !== options.vnode) options.vnode(p);
+    return p;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+
+##### Default:
+
+```js
+import preact from 'preact';
+
+// Tell Babel to transform JSX into preact.<span class="apidocCodeKeywordSpan">h</span>() calls:
+/** @jsx preact.h */
+```
+
+&gt; Named imports work well for highly structured applications, whereas the default import is quick and never needs to be updated
+ when using different parts of the library.
+&gt;
+&gt; Instead of declaring the `@jsx` pragma in your code, it's best to configure it globally in a `.babelrc`:
+&gt;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.preact.render" id="apidoc.element.preact.render">
+        function <span class="apidocSignatureSpan">preact.</span>render
+        <span class="apidocSignatureSpan">(vnode, parent, merge)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function render(vnode, parent, merge) {
+    return diff(merge, vnode, {}, !1, parent, !1);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.preact.rerender" id="apidoc.element.preact.rerender">
+        function <span class="apidocSignatureSpan">preact.</span>rerender
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function rerender() {
+    var p, list = items;
+    items = [];
+    while (p = list.pop()) if (p.__d) renderComponent(p);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.preact.Component" id="apidoc.module.preact.Component">module preact.Component</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.preact.Component.Component" id="apidoc.element.preact.Component.Component">
+        function <span class="apidocSignatureSpan">preact.</span>Component
+        <span class="apidocSignatureSpan">(props, context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Component(props, context) {
+    this.__d = !0;
+    this.context = context;
+    this.props = props;
+    this.state = this.state || {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.preact.Component.prototype" id="apidoc.module.preact.Component.prototype">module preact.Component.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.preact.Component.prototype.forceUpdate" id="apidoc.element.preact.Component.prototype.forceUpdate">
+        function <span class="apidocSignatureSpan">preact.Component.prototype.</span>forceUpdate
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">forceUpdate = function (callback) {
+    if (callback) (this.__h = this.__h || []).push(callback);
+    renderComponent(this, 2);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.preact.Component.prototype.render" id="apidoc.element.preact.Component.prototype.render">
+        function <span class="apidocSignatureSpan">preact.Component.prototype.</span>render
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">render = function () {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.preact.Component.prototype.setState" id="apidoc.element.preact.Component.prototype.setState">
+        function <span class="apidocSignatureSpan">preact.Component.prototype.</span>setState
+        <span class="apidocSignatureSpan">(state, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setState = function (state, callback) {
+    var s = this.state;
+    if (!this.__s) this.__s = extend({}, s);
+    extend(s, 'function' == typeof state ? state(s, this.props) : state);
+    if (callback) (this.__h = this.__h || []).push(callback);
+    enqueueRender(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+			time: Date.now()
+		};
+	}
+
+	componentDidMount() {
+		// update time every second
+		this.timer = setInterval(() =&gt; {
+			this.<span class="apidocCodeKeywordSpan">setState</span>({ time: Date.now() });
+		}, 1000);
+	}
+
+	componentWillUnmount() {
+		// stop when not renderable
+		clearInterval(this.timer);
+	}
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>

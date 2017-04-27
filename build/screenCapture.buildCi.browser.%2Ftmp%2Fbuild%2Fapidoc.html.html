@@ -237,7 +237,24 @@ else {
     if (void 0 !== options.vnode) options.vnode(p);
     return p;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+/** Create an element with the given nodeName.
+ *	@param {String} nodeName
+ *	@param {Boolean} [isSvg=false]	If `true`, creates an element within the SVG namespace.
+ *	@returns {Element} node
+ */
+
+function createNode(nodeName, isSvg) {
+    var node = isSvg ? document.createElementNS('http://www.w3.org/2000/svg', nodeName) : document.<span class="apidocCodeKeywordSpan
+">createElement</span>(nodeName);
+    node.normalizedNodeName = nodeName;
+    return node;
+}
+
+/** Remove a child node from its parent if attached.
+ *	@param {Element} node		The node to remove
+ */
+...</pre></li>
     </ul>
 
 
@@ -305,7 +322,23 @@ import preact from 'preact';
     <li>description and source-code<pre class="apidocCodePre">function render(vnode, parent, merge) {
     return diff(merge, vnode, {}, !1, parent, !1);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+                break;
+            }
+        }
+    }
+    return inst;
+}
+
+/** The `.<span class="apidocCodeKeywordSpan">render</span>()` method for a PFC backing instance. */
+function doRender(props, state, context) {
+    return this.constructor(props, context);
+}
+
+/** Set a component's `props` (generally derived from JSX attributes).
+ *	@param {Object} props
+ *	@param {Object} [opts]
+...</pre></li>
     </ul>
 
 
@@ -383,7 +416,23 @@ import preact from 'preact';
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">render = function () {}</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+                break;
+            }
+        }
+    }
+    return inst;
+}
+
+/** The `.<span class="apidocCodeKeywordSpan">render</span>()` method for a PFC backing instance. */
+function doRender(props, state, context) {
+    return this.constructor(props, context);
+}
+
+/** Set a component's `props` (generally derived from JSX attributes).
+ *	@param {Object} props
+ *	@param {Object} [opts]
+...</pre></li>
     </ul>
 
 
